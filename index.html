@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jannatul Mahia | Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            midnight: '#1e1e2f',
+            lavenderText: '#dcd6f7',
+            mutedPurple: '#8a65c2',
+          },
+          animation: {
+            fadeIn: 'fadeIn 1s ease-out forwards',
+          },
+          keyframes: {
+            fadeIn: {
+              '0%': { opacity: 0, transform: 'translateY(15px)' },
+              '100%': { opacity: 1, transform: 'translateY(0)' },
+            },
+          },
+        },
+      },
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-midnight text-lavenderText min-h-screen">
+
+  <!-- Header -->
+  <header class="p-8 text-center shadow-md bg-gradient-to-r from-mutedPurple to-indigo-700">
+    <img src="formal photo.jpg" alt="Jannatul Mahia" class="w-24 h-24 mx-auto rounded-full border-4 border-lavenderText shadow-lg mb-4" />
+    <h1 class="text-3xl font-bold animate-fadeIn">Jannatul Mahia</h1>
+    <p class="text-lg mt-1 animate-fadeIn">Web Developer | Python | Django | HTML | Tailwind CSS</p>
+  </header>
+
+  <!-- About Me -->
+  <section class="p-6 max-w-3xl mx-auto mt-6 animate-fadeIn">
+    <h2 class="text-2xl font-semibold mb-4 border-b border-mutedPurple pb-2">About Me</h2>
+    <p>
+      I’m a passionate Computer Science student with experience in Django, HTML, Tailwind CSS, and frontend design. I love building responsive web apps and clean user interfaces. Always ready to take on new challenges and grow as a developer.
+    </p>
+  </section>
+
+  <!-- Skills -->
+  <section class="p-6 max-w-3xl mx-auto mt-6 bg-[#2a2a47] rounded-lg animate-fadeIn">
+    <h2 class="text-2xl font-semibold mb-4 border-b border-mutedPurple pb-2">Skills</h2>
+    <ul class="list-disc pl-6 grid grid-cols-2 gap-2">
+      <li>HTML5</li>
+      <li>CSS3 / Tailwind CSS</li>
+      <li>JavaScript (basic)</li>
+      <li>Python</li>
+      <li>Django Framework</li>
+      <li>Git & GitHub</li>
+    </ul>
+  </section>
+
+ <!-- Prroject -->
+<section class="p-6 max-w-3xl mx-auto mt-6 animate-fadeIn">
+    <h2 class="text-2xl font-semibold mb-4 border-b border-mutedPurple pb-2">Projects</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="bg-[#2a2a47] border border-mutedPurple p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+        <h3 class="font-bold text-lg md:text-xl">Event Management System</h3>
+        <p class="text-sm md:text-base mt-1">Django project with user login, event creation, RSVP, role-based access, and Tailwind styling.</p>
+        <a href="https://github.com/jannatulmahia20/Event-Management" class="text-mutedPurple underline mt-2 inline-block hover:text-lavenderText md:text-base">GitHub Link</a>
+      </div>
+  
+      <div class="bg-[#2a2a47] border border-mutedPurple p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+        <h3 class="font-bold text-lg md:text-xl">Portfolio Website</h3>
+        <p class="text-sm md:text-base mt-1">Fully responsive HTML + Tailwind CSS personal portfolio site to showcase skills and work.</p>
+        <a href="https://github.com/jannatulmahia20" class="text-mutedPurple underline mt-2 inline-block hover:text-lavenderText md:text-base">GitHub Link</a>
+      </div>
+    </div>
+  </section>
+  
+
+  <!-- Contact -->
+  <section class="p-6 max-w-3xl mx-auto mt-6 mb-10 bg-[#2a2a47] rounded-lg animate-fadeIn">
+    <h2 class="text-2xl font-semibold mb-4 border-b border-mutedPurple pb-2">Contact</h2>
+    <p>Email: <a href="mailto:jannatulmahia8215@gmail.com" class="text-mutedPurple underline hover:text-lavenderText">jannatulmahia8215@gmail.com</a></p>
+    <p class="mt-2">LinkedIn: <a href="https://linkedin.com/in/jannatul-mahia20" class="text-mutedPurple underline hover:text-lavenderText">linkedin.com/in/jannatul-mahia20</a></p>
+
+    <a href="Jannatul Mahia.pdf" download class="mt-4 inline-block bg-mutedPurple text-midnight px-4 py-2 rounded shadow hover:bg-indigo-700 hover:text-lavenderText transition duration-300">
+      Download Resume
+    </a>
+  </section>
+
+  <footer class="text-center text-sm p-4 bg-gradient-to-r from-mutedPurple to-indigo-700 text-lavenderText">
+    © 2025 Jannatul Mahia. All rights reserved.
+  </footer>
+</body>
+</html>
