@@ -2,99 +2,178 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Jannatul Mahia | Portfolio</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            midnight: '#1e1e2f',
-            lavenderText: '#dcd6f7',
-            mutedPurple: '#8a65c2',
-          },
-          animation: {
-            fadeIn: 'fadeIn 1s ease-out forwards',
-          },
-          keyframes: {
-            fadeIn: {
-              '0%': { opacity: 0, transform: 'translateY(15px)' },
-              '100%': { opacity: 1, transform: 'translateY(0)' },
-            },
-          },
-        },
-      },
-    }
-  </script>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
   <style>
     body {
-      font-family: 'Montserrat', sans-serif;
+      font-family: 'Poppins', sans-serif;
     }
+    html {
+  scroll-behavior: smooth;
+}
+
   </style>
 </head>
-<body class="bg-midnight text-lavenderText min-h-screen">
+<body class="bg-gradient-to-b from-purple-900 to-gray-900 text-white">
+
+  <!-- Navigation Bar -->
+<nav class="bg-[#1e1e2f] shadow-md sticky top-0 z-20">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="flex justify-between items-center h-16">
+      
+      
+      <!-- Logo in Navbar -->
+<div class="flex items-center space-x-2">
+  <img src="jm logo.png" alt="JM Logo" class="w-14 h-14 object-contain" />
+</div>
+
+
+
+      
+      <!-- Menu Buttons -->
+<div class="hidden md:flex space-x-8 text-[#dcd6f7] font-medium">
+  <a href="#home" class="hover:text-[#8a65c2] transition">Home</a>
+  <a href="#skills" class="hover:text-[#8a65c2] transition">Skills</a>
+  <a href="#contact" class="hover:text-[#8a65c2] transition">Contact</a>
+  <a href="#services" class="hover:text-[#8a65c2] transition">Services</a>
+  <a href="#education" class="hover:text-[#8a65c2] transition">Education</a>
+</div>
+
+      
+      
+     <!-- Mobile Menu -->
+<div id="mobile-menu" class="hidden bg-[#1e1e2f] text-[#dcd6f7] space-y-4 px-6 py-4 md:hidden">
+  <a href="#home" class="block w-full text-left hover:text-[#8a65c2] transition">Home</a>
+  <a href="#skills" class="block w-full text-left hover:text-[#8a65c2] transition">Skills</a>
+  <a href="#contact" class="block w-full text-left hover:text-[#8a65c2] transition">Contact</a>
+  <a href="#services" class="block w-full text-left hover:text-[#8a65c2] transition">Services</a>
+  <a href="#education" class="block w-full text-left hover:text-[#8a65c2] transition">Education</a>
+</div>
+
+      
+    </div>
+  </div>
+</nav>
+<script>
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  menuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+</script>
+
 
   <!-- Header -->
-  <header class="p-8 text-center shadow-md bg-gradient-to-r from-mutedPurple to-indigo-700">
-    <img src="formal photo.jpg" alt="Jannatul Mahia" class="w-24 h-24 mx-auto rounded-full border-4 border-lavenderText shadow-lg mb-4" />
-    <h1 class="text-3xl font-bold animate-fadeIn">Jannatul Mahia</h1>
-    <p class="text-lg mt-1 animate-fadeIn">Web Developer | Python | Django | HTML | Tailwind CSS</p>
+  <header class="flex flex-col md:flex-row items-center justify-between p-8 max-w-6xl mx-auto">
+    <div class="text-center md:text-left">
+      <h1 class="text-4xl md:text-5xl font-bold text-purple-300 animate-pulse">Jannatul Mahia</h1>
+      <p class="mt-2 text-lg text-purple-100">Web Developer | Python | Django | Tailwind CSS</p>
+    </div>
+    <img src="jannatul_mahia.jpg" alt="Profile" class="w-32 h-32 md:w-40 md:h-40 rounded-full border-4 border-purple-500 mt-6 md:mt-0 shadow-lg" />
   </header>
 
   <!-- About Me -->
-  <section class="p-6 max-w-3xl mx-auto mt-6 animate-fadeIn">
-    <h2 class="text-2xl font-semibold mb-4 border-b border-mutedPurple pb-2">About Me</h2>
-    <p>
-      I’m a passionate Computer Science student with experience in Django, HTML, Tailwind CSS, and frontend design. I love building responsive web apps and clean user interfaces. Always ready to take on new challenges and grow as a developer.
+  <section  id="home"  class="p-6 max-w-4xl mx-auto">
+    <h2 class="text-3xl font-semibold text-purple-200 mb-4">About Me</h2>
+    <p class="text-gray-300 leading-relaxed">
+      I’m a passionate Computer Science student with experience in Django, HTML, Tailwind CSS, and frontend design.
+      I love building responsive web apps and clean user interfaces. Always ready to take on new challenges and grow as a developer.
     </p>
   </section>
 
   <!-- Skills -->
-  <section class="p-6 max-w-3xl mx-auto mt-6 bg-[#2a2a47] rounded-lg animate-fadeIn">
-    <h2 class="text-2xl font-semibold mb-4 border-b border-mutedPurple pb-2">Skills</h2>
-    <ul class="list-disc pl-6 grid grid-cols-2 gap-2">
-      <li>HTML5</li>
-      <li>CSS3 / Tailwind CSS</li>
-      <li>JavaScript (basic)</li>
-      <li>Python</li>
-      <li>Django Framework</li>
-      <li>Git & GitHub</li>
-    </ul>
-  </section>
-
- <!-- Prroject -->
-<section class="p-6 max-w-3xl mx-auto mt-6 animate-fadeIn">
-    <h2 class="text-2xl font-semibold mb-4 border-b border-mutedPurple pb-2">Projects</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-      <div class="bg-[#2a2a47] border border-mutedPurple p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
-        <h3 class="font-bold text-lg md:text-xl">Event Management System</h3>
-        <p class="text-sm md:text-base mt-1">Django project with user login, event creation, RSVP, role-based access, and Tailwind styling.</p>
-        <a href="https://github.com/jannatulmahia20/Event-Management" class="text-mutedPurple underline mt-2 inline-block hover:text-lavenderText md:text-base">GitHub Link</a>
-      </div>
-  
-      <div class="bg-[#2a2a47] border border-mutedPurple p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
-        <h3 class="font-bold text-lg md:text-xl">Portfolio Website</h3>
-        <p class="text-sm md:text-base mt-1">Fully responsive HTML + Tailwind CSS personal portfolio site to showcase skills and work.</p>
-        <a href="https://github.com/jannatulmahia20" class="text-mutedPurple underline mt-2 inline-block hover:text-lavenderText md:text-base">GitHub Link</a>
-      </div>
+  <section id="skills" class="p-6 max-w-4xl mx-auto">
+    <h2 class="text-3xl font-semibold text-purple-200 mb-4">Skills</h2>
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-4 text-gray-300">
+      <span class="bg-purple-800 rounded px-3 py-2 text-center shadow">HTML5</span>
+      <span class="bg-purple-800 rounded px-3 py-2 text-center shadow">Tailwind CSS</span>
+      <span class="bg-purple-800 rounded px-3 py-2 text-center shadow">JavaScript (basic)</span>
+      <span class="bg-purple-800 rounded px-3 py-2 text-center shadow">Python</span>
+      <span class="bg-purple-800 rounded px-3 py-2 text-center shadow">Django</span>
+      <span class="bg-purple-800 rounded px-3 py-2 text-center shadow">Git & GitHub</span>
     </div>
   </section>
-  
+
+ <!-- Projects -->
+<section id="projects" class="p-6 max-w-4xl mx-auto">
+  <h2 class="text-3xl font-semibold text-[#dcd6f7] mb-4">Projects</h2>
+  <div class="grid md:grid-cols-2 gap-4">
+    
+    <!-- Event Management System -->
+    <div class="border border-[#8a65c2] p-4 rounded-lg shadow-sm bg-[#2a2a40]">
+      <h3 class="font-bold text-xl text-[#8a65c2]">Event Management System</h3>
+      <p class="text-sm mt-1 text-gray-300">
+        Django project with user login, event creation, RSVP, role-based access, and Tailwind styling.
+      </p>
+      <a href="https://github.com/jannatulmahia20/Event-Management" class="text-[#dcd6f7] underline mt-2 inline-block">GitHub Link</a>
+    </div>
+
+    <!-- Portfolio Website -->
+    <div class="border border-[#8a65c2] p-4 rounded-lg shadow-sm bg-[#2a2a40]">
+      <h3 class="font-bold text-xl text-[#8a65c2]">Portfolio Website</h3>
+      <p class="text-sm mt-1 text-gray-300">
+        Responsive HTML + Tailwind CSS portfolio to showcase skills and work.
+      </p>
+      <a href="https://github.com/jannatulmahia20" class="text-[#dcd6f7] underline mt-2 inline-block">GitHub Link</a>
+    </div>
+
+    <!-- Drink App -->
+    <div class="border border-[#8a65c2] p-4 rounded-lg shadow-sm bg-[#2a2a40]">
+      <h3 class="font-bold text-xl text-[#8a65c2]">Drink App</h3>
+      <p class="text-sm mt-1 text-gray-300">
+        A sleek drink listing app with interactive UI, search, and filtering. Built using HTML, CSS, and JavaScript.
+      </p>
+      <a href="https://github.com/jannatulmahia20/Drink-App" class="text-[#dcd6f7] underline mt-2 inline-block">GitHub Link</a>
+    </div>
+
+    <!-- Task Record Dashboard -->
+    <div class="border border-[#8a65c2] p-4 rounded-lg shadow-sm bg-[#2a2a40]">
+      <h3 class="font-bold text-xl text-[#8a65c2]">Task Record Dashboard</h3>
+      <p class="text-sm mt-1 text-gray-300">
+        Python and SQL-based desktop app for task tracking with login, GUI design, and SQLite integration.
+      </p>
+      <a href="https://github.com/jannatulmahia20/Task-Record-Dashboard" class="text-[#dcd6f7] underline mt-2 inline-block">GitHub Link</a>
+    </div>
+
+  </div>
+</section>
+
+
+  <!-- Services -->
+  <section id="services" class="p-6 max-w-4xl mx-auto">
+    <h2 class="text-3xl font-semibold text-purple-200 mb-4">Services</h2>
+    <p class="text-gray-300">Coming soon...</p>
+  </section>
+
+  <!-- Education -->
+  <section id="education" class="p-6 max-w-4xl mx-auto">
+    <h2 class="text-3xl font-semibold text-purple-200 mb-4">Education</h2>
+    <p class="text-gray-300">BSc in Computer Science, IUB</p>
+  </section>
 
   <!-- Contact -->
-  <section class="p-6 max-w-3xl mx-auto mt-6 mb-10 bg-[#2a2a47] rounded-lg animate-fadeIn">
-    <h2 class="text-2xl font-semibold mb-4 border-b border-mutedPurple pb-2">Contact</h2>
-    <p>Email: <a href="mailto:jannatulmahia8215@gmail.com" class="text-mutedPurple underline hover:text-lavenderText">jannatulmahia8215@gmail.com</a></p>
-    <p class="mt-2">LinkedIn: <a href="https://linkedin.com/in/jannatul-mahia20" class="text-mutedPurple underline hover:text-lavenderText">linkedin.com/in/jannatul-mahia20</a></p>
-
-    <a href="Jannatul Mahia.pdf" download class="mt-4 inline-block bg-mutedPurple text-midnight px-4 py-2 rounded shadow hover:bg-indigo-700 hover:text-lavenderText transition duration-300">
+  <section id="contact" class="p-6 max-w-4xl mx-auto mb-10">
+    <h2 class="text-3xl font-semibold text-purple-200 mb-4">Contact</h2>
+    <p class="flex items-center gap-2">
+      <i class="fas fa-envelope text-cyan-300"></i>
+      <a href="mailto:jannatulmahia8215@gmail.com" class="underline">jannatulmahia8215@gmail.com</a>
+    </p>
+    <p class="flex items-center gap-2">
+      <i class="fab fa-linkedin text-cyan-300"></i>
+      <a href="https://linkedin.com/in/jannatul-mahia20" class="underline">Jannatul Mahia</a>
+    </p>
+    <a href="Jannatul Mahia.pdf" download class="mt-4 inline-block bg-cyan-600 text-white px-4 py-2 rounded shadow hover:bg-cyan-700">
       Download Resume
     </a>
   </section>
 
-  <footer class="text-center text-sm p-4 bg-gradient-to-r from-mutedPurple to-indigo-700 text-lavenderText">
+  <footer class="text-center text-sm p-4 bg-purple-900 text-purple-300">
     © 2025 Jannatul Mahia. All rights reserved.
   </footer>
 </body>
