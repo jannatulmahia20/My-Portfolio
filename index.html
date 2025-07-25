@@ -8,6 +8,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
 
   <style>
     body {
@@ -19,8 +21,10 @@
 
   </style>
 </head>
+
 <body class="bg-gradient-to-b from-purple-900 to-gray-900 text-white">
 
+ 
   <!-- Navigation Bar -->
 <nav class="bg-[#1e1e2f] shadow-md sticky top-0 z-20">
   <div class="max-w-6xl mx-auto px-6">
@@ -54,7 +58,10 @@
   <a href="#services" class="block w-full text-left hover:text-[#8a65c2] transition">Services</a>
   <a href="#education" class="block w-full text-left hover:text-[#8a65c2] transition">Education</a>
 </div>
-
+<!--  Hamburger Menu Button for Mobile -->
+<button id="menu-btn" class="md:hidden text-[#dcd6f7] focus:outline-none">
+  <i class="fas fa-bars text-2xl"></i>
+</button>
       
     </div>
   </div>
@@ -67,6 +74,7 @@
     mobileMenu.classList.toggle('hidden');
   });
 </script>
+
 
 
   <!-- Header -->
@@ -89,8 +97,10 @@
 
   <!-- Skills -->
   <section id="skills" class="p-6 max-w-4xl mx-auto">
-    <h2 class="text-3xl font-semibold text-purple-200 mb-4">Skills</h2>
+    <h2 class="text-3xl font-semibold text-purple-200 mb-4"> My Skills</h2>
+
     <div class="grid grid-cols-2 md:grid-cols-3 gap-4 text-gray-300">
+      
       <span class="bg-purple-800 rounded px-3 py-2 text-center shadow">HTML5</span>
       <span class="bg-purple-800 rounded px-3 py-2 text-center shadow">Tailwind CSS</span>
       <span class="bg-purple-800 rounded px-3 py-2 text-center shadow">JavaScript (basic)</span>
@@ -145,16 +155,54 @@
 </section>
 
 
-  <!-- Services -->
-  <section id="services" class="p-6 max-w-4xl mx-auto">
-    <h2 class="text-3xl font-semibold text-purple-200 mb-4">Services</h2>
-    <p class="text-gray-300">Coming soon...</p>
-  </section>
+  <!-- Services Section -->
+<section id="services" class="py-16 bg-[#1e1e2f] text-[#dcd6f7]">
+  <div class="max-w-6xl mx-auto px-6">
+    <h2 class="text-4xl font-bold text-center mb-12 text-[#8a65c2]">What I Offer</h2>
+    <div class="grid gap-8 md:grid-cols-3">
+
+      <!-- Service 1 -->
+      <div class="bg-[#2a2a40] p-6 rounded-2xl shadow-lg hover:scale-105 transform transition">
+        <div class="text-4xl mb-4 text-[#8a65c2]">
+          <i class="fas fa-laptop-code"></i>
+        </div>
+        <h3 class="text-xl font-semibold mb-2">Basic Web Development</h3>
+        <p class="text-sm leading-relaxed">
+          I create responsive portfolio and personal websites using HTML, CSS, Tailwind, and Bootstrap.
+        </p>
+      </div>
+
+      <!-- Service 2 -->
+      <div class="bg-[#2a2a40] p-6 rounded-2xl shadow-lg hover:scale-105 transform transition">
+        <div class="text-4xl mb-4 text-[#8a65c2]">
+          <i class="fas fa-code"></i>
+        </div>
+        <h3 class="text-xl font-semibold mb-2">Academic Programming Help</h3>
+        <p class="text-sm leading-relaxed">
+          I assist with Python, HTML, CSS and academic assignments for Computer Science and Engineering students.
+        </p>
+      </div>
+
+      <!-- Service 3 -->
+      <div class="bg-[#2a2a40] p-6 rounded-2xl shadow-lg hover:scale-105 transform transition">
+        <div class="text-4xl mb-4 text-[#8a65c2]">
+          <i class="fas fa-chalkboard-teacher"></i>
+        </div>
+        <h3 class="text-xl font-semibold mb-2">1-on-1 Concept Support</h3>
+        <p class="text-sm leading-relaxed">
+          Need help understanding logic, code debugging, or Python tasks? I offer clear and supportive guidance.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 
   <!-- Education -->
   <section id="education" class="p-6 max-w-4xl mx-auto">
     <h2 class="text-3xl font-semibold text-purple-200 mb-4">Education</h2>
-    <p class="text-gray-300">BSc in Computer Science, IUB</p>
+    <p class="text-gray-300">BSc in Computer Science And Engineering, IUB</p>
   </section>
 
   <!-- Contact -->
@@ -176,5 +224,11 @@
   <footer class="text-center text-sm p-4 bg-purple-900 text-purple-300">
     © 2025 Jannatul Mahia. All rights reserved.
   </footer>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
 </body>
 </html>
