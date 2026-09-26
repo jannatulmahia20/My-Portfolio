@@ -8,7 +8,7 @@
 
   <meta
     name="description"
-    content="Jannatul Mahia is a Computer Science graduate-in-progress specializing in software and full-stack web development with Python, Django, FastAPI, React, and modern web technologies."
+    content="Jannatul Mahia is a Computer Science student specializing in software and full-stack web development with Python, Django, FastAPI, React, and modern web technologies."
   />
 
   <meta name="author" content="Jannatul Mahia" />
@@ -16,6 +16,7 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
   <link
     href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&display=swap"
     rel="stylesheet"
@@ -66,11 +67,6 @@
       text-decoration: none;
     }
 
-    img {
-      max-width: 100%;
-      display: block;
-    }
-
     .container {
       width: min(1120px, 90%);
       margin: auto;
@@ -78,7 +74,7 @@
 
     /* =========================
        NAVBAR
-    ========================= */
+    ========================== */
 
     header {
       position: fixed;
@@ -99,13 +95,14 @@
     }
 
     .logo {
-      font-family: "DM Serif Display", serif;
-      font-size: 1.55rem;
-      color: var(--navy);
+      display: flex;
+      align-items: center;
     }
 
-    .logo span {
-      color: var(--teal);
+    .logo img {
+      width: 48px;
+      height: 48px;
+      object-fit: contain;
     }
 
     .nav-links {
@@ -149,11 +146,11 @@
 
     /* =========================
        HERO
-    ========================= */
+    ========================== */
 
     .hero {
       min-height: 100vh;
-      padding: 150px 0 90px;
+      padding: 145px 0 90px;
       display: flex;
       align-items: center;
       position: relative;
@@ -182,8 +179,14 @@
       left: -120px;
     }
 
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.3fr 0.7fr;
+      align-items: center;
+      gap: 60px;
+    }
+
     .hero-content {
-      max-width: 850px;
       position: relative;
       z-index: 2;
     }
@@ -225,7 +228,7 @@
 
     .hero h1 {
       font-family: "DM Serif Display", serif;
-      font-size: clamp(3.5rem, 8vw, 6.5rem);
+      font-size: clamp(3.5rem, 8vw, 6rem);
       line-height: 0.98;
       color: var(--navy);
       margin-bottom: 18px;
@@ -306,9 +309,40 @@
       font-size: 0.86rem;
     }
 
+    /* HERO PHOTO */
+
+    .hero-photo-wrapper {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 2;
+    }
+
+    .hero-photo {
+      width: 330px;
+      height: 390px;
+      object-fit: cover;
+      border-radius: 180px 180px 25px 25px;
+      border: 8px solid var(--white);
+      box-shadow: 0 25px 60px rgba(16, 42, 67, 0.14);
+      background: var(--cream-dark);
+    }
+
+    .photo-decoration {
+      position: absolute;
+      width: 330px;
+      height: 390px;
+      border: 2px solid var(--teal);
+      border-radius: 180px 180px 25px 25px;
+      transform: translate(18px, 18px);
+      z-index: -1;
+      opacity: 0.5;
+    }
+
     /* =========================
        GENERAL SECTIONS
-    ========================= */
+    ========================== */
 
     section {
       padding: 100px 0;
@@ -342,7 +376,7 @@
 
     /* =========================
        ABOUT
-    ========================= */
+    ========================== */
 
     .about {
       background: var(--white);
@@ -394,7 +428,7 @@
 
     /* =========================
        SKILLS
-    ========================= */
+    ========================== */
 
     .skills-grid {
       display: grid;
@@ -450,7 +484,7 @@
 
     /* =========================
        PROJECTS
-    ========================= */
+    ========================== */
 
     .projects {
       background: var(--white);
@@ -607,7 +641,7 @@
 
     /* =========================
        EXPERIENCE
-    ========================= */
+    ========================== */
 
     .experience-grid {
       display: grid;
@@ -664,7 +698,7 @@
 
     /* =========================
        EDUCATION
-    ========================= */
+    ========================== */
 
     .education {
       background: var(--white);
@@ -702,7 +736,7 @@
 
     /* =========================
        CONTACT
-    ========================= */
+    ========================== */
 
     .contact-grid {
       display: grid;
@@ -729,9 +763,11 @@
       margin-bottom: 17px;
       color: var(--muted);
       font-size: 0.9rem;
+      word-break: break-word;
     }
 
     .contact-item i {
+      min-width: 38px;
       width: 38px;
       height: 38px;
       display: grid;
@@ -810,7 +846,7 @@
 
     /* =========================
        FOOTER
-    ========================= */
+    ========================== */
 
     footer {
       background: var(--navy-dark);
@@ -827,13 +863,14 @@
     }
 
     .footer-logo {
-      font-family: "DM Serif Display", serif;
-      color: var(--white);
-      font-size: 1.2rem;
+      display: flex;
+      align-items: center;
     }
 
-    .footer-logo span {
-      color: var(--teal-light);
+    .footer-logo img {
+      width: 45px;
+      height: 45px;
+      object-fit: contain;
     }
 
     .footer-inner p {
@@ -842,7 +879,7 @@
 
     /* =========================
        REVEAL ANIMATION
-    ========================= */
+    ========================== */
 
     .reveal {
       opacity: 0;
@@ -857,9 +894,43 @@
 
     /* =========================
        RESPONSIVE
-    ========================= */
+    ========================== */
 
-    @media (max-width: 900px) {
+    @media (max-width: 950px) {
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 45px;
+      }
+
+      .hero-content {
+        text-align: center;
+      }
+
+      .hero-description {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .hero-buttons,
+      .hero-stats {
+        justify-content: center;
+      }
+
+      .hero-photo-wrapper {
+        order: -1;
+      }
+
+      .hero-photo {
+        width: 270px;
+        height: 320px;
+      }
+
+      .photo-decoration {
+        width: 270px;
+        height: 320px;
+      }
+
       .skills-grid {
         grid-template-columns: repeat(2, 1fr);
       }
@@ -884,6 +955,7 @@
     }
 
     @media (max-width: 700px) {
+
       .nav-links {
         position: absolute;
         top: 76px;
@@ -922,7 +994,7 @@
       }
 
       .hero {
-        padding-top: 125px;
+        padding-top: 120px;
       }
 
       .hero h1 {
@@ -958,6 +1030,7 @@
     }
 
     @media (max-width: 450px) {
+
       .hero h1 {
         font-size: 3.2rem;
       }
@@ -974,6 +1047,16 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
       }
+
+      .hero-photo {
+        width: 235px;
+        height: 280px;
+      }
+
+      .photo-decoration {
+        width: 235px;
+        height: 280px;
+      }
     }
   </style>
 </head>
@@ -986,25 +1069,45 @@
 
   <header>
     <div class="container">
-      <nav>
-        <a href="#home" class="logo">Jannatul<span>.</span></a>
 
-        <button class="menu-toggle" id="menuToggle" aria-label="Open navigation">
+      <nav>
+
+        <a href="#home" class="logo">
+          <img src="jm logo.png" alt="JM Logo" />
+        </a>
+
+        <button
+          class="menu-toggle"
+          id="menuToggle"
+          aria-label="Open navigation"
+        >
           <i class="fa-solid fa-bars"></i>
         </button>
 
         <ul class="nav-links" id="navLinks">
+
           <li><a href="#home">Home</a></li>
+
           <li><a href="#about">About</a></li>
+
           <li><a href="#skills">Skills</a></li>
+
           <li><a href="#projects">Projects</a></li>
+
           <li><a href="#experience">Experience</a></li>
+
           <li><a href="#education">Education</a></li>
+
           <li>
-            <a href="#contact" class="nav-contact">Let's Talk</a>
+            <a href="#contact" class="nav-contact">
+              Let's Talk
+            </a>
           </li>
+
         </ul>
+
       </nav>
+
     </div>
   </header>
 
@@ -1016,63 +1119,91 @@
   <main>
 
     <section class="hero" id="home">
+
       <div class="container">
-        <div class="hero-content reveal">
 
-          <div class="availability">
-            <span class="availability-dot"></span>
-            Available for Software & Full-Stack Opportunities
-          </div>
+        <div class="hero-grid">
 
-          <h1>Jannatul Mahia.</h1>
+          <div class="hero-content reveal">
 
-          <div class="hero-title">
-            Full-Stack Developer | Python • Django • FastAPI • React
-          </div>
-
-          <p class="hero-description">
-            Computer Science student at Independent University, Bangladesh,
-            passionate about building practical web applications and solving
-            real-world problems through software. I work across frontend and
-            backend development using Python, Django, FastAPI, React, and
-            modern web technologies.
-          </p>
-
-          <div class="hero-buttons">
-            <a href="#projects" class="btn btn-primary">
-              View My Work
-              <i class="fa-solid fa-arrow-down"></i>
-            </a>
-
-            <a
-             href="Jannatul_Mahia_CV_Internship.pdf"
-              class="btn btn-outline"
-              target="_blank"
-            >
-              <i class="fa-solid fa-file-arrow-down"></i>
-              Resume
-            </a>
-          </div>
-
-          <div class="hero-stats">
-            <div class="stat">
-              <strong>3</strong>
-              <span>Live Projects</span>
+            <div class="availability">
+              <span class="availability-dot"></span>
+              Available for Software & Full-Stack Opportunities
             </div>
 
-            <div class="stat">
-              <strong>Full</strong>
-              <span>Stack Focus</span>
+            <h1>Jannatul Mahia.</h1>
+
+            <div class="hero-title">
+              Full-Stack Developer | Python • Django • FastAPI • React
             </div>
 
-            <div class="stat">
-              <strong>2026</strong>
-              <span>Graduation</span>
+            <p class="hero-description">
+              Computer Science student at Independent University,
+              Bangladesh, passionate about building practical web
+              applications and solving real-world problems through
+              software. I work across frontend and backend development
+              using Python, Django, FastAPI, React, and modern web
+              technologies.
+            </p>
+
+            <div class="hero-buttons">
+
+              <a href="#projects" class="btn btn-primary">
+                View My Work
+                <i class="fa-solid fa-arrow-down"></i>
+              </a>
+
+              <a
+                href="Jannatul_Mahia_CV_Internship.pdf"
+                class="btn btn-outline"
+                target="_blank"
+              >
+                <i class="fa-solid fa-file-arrow-down"></i>
+                Resume
+              </a>
+
             </div>
+
+            <div class="hero-stats">
+
+              <div class="stat">
+                <strong>3</strong>
+                <span>Live Projects</span>
+              </div>
+
+              <div class="stat">
+                <strong>Full</strong>
+                <span>Stack Focus</span>
+              </div>
+
+              <div class="stat">
+                <strong>2026</strong>
+                <span>Graduation</span>
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <!-- PHOTO -->
+
+          <div class="hero-photo-wrapper reveal">
+
+            <img
+              src="jannatul_mahia.jpg"
+              alt="Jannatul Mahia"
+              class="hero-photo"
+            />
+
+            <div class="photo-decoration"></div>
+
           </div>
 
         </div>
+
       </div>
+
     </section>
 
 
@@ -1081,31 +1212,42 @@
     ========================== -->
 
     <section class="about" id="about">
+
       <div class="container">
 
         <div class="section-heading reveal">
-          <div class="section-label">About Me</div>
-          <h2>Building software with purpose.</h2>
+
+          <div class="section-label">
+            About Me
+          </div>
+
+          <h2>
+            Building software with purpose.
+          </h2>
+
           <p>
-            A developer who enjoys turning ideas into useful, functional
-            digital products.
+            A developer who enjoys turning ideas into useful,
+            functional digital products.
           </p>
+
         </div>
+
 
         <div class="about-grid">
 
           <div class="about-text reveal">
+
             <p>
-              I'm Jannatul Mahia, a Computer Science & Engineering student
-              at Independent University, Bangladesh, with a minor in Human
-              Resource Management.
+              I'm Jannatul Mahia, a Computer Science & Engineering
+              student at Independent University, Bangladesh, with a
+              minor in Human Resource Management.
             </p>
 
             <p>
-              My main interest is software and full-stack web development.
-              I enjoy working on both frontend interfaces and backend
-              systems, connecting APIs, handling data, and building
-              applications that solve practical problems.
+              My main interest is software and full-stack web
+              development. I enjoy working on both frontend interfaces
+              and backend systems, connecting APIs, handling data, and
+              building applications that solve practical problems.
             </p>
 
             <p>
@@ -1115,16 +1257,22 @@
             </p>
 
             <p>
-              I'm currently looking for opportunities where I can contribute,
-              learn from experienced developers, and continue growing as a
-              software developer.
+              I'm currently looking for opportunities where I can
+              contribute, learn from experienced developers, and
+              continue growing as a software developer.
             </p>
+
           </div>
 
+
           <div class="about-card reveal">
-            <h3>What I Bring</h3>
+
+            <h3>
+              What I Bring
+            </h3>
 
             <ul class="about-list">
+
               <li>
                 <i class="fa-solid fa-check"></i>
                 Full-stack web development experience
@@ -1154,11 +1302,15 @@
                 <i class="fa-solid fa-check"></i>
                 Git, GitHub and deployment experience
               </li>
+
             </ul>
+
           </div>
 
         </div>
+
       </div>
+
     </section>
 
 
@@ -1167,45 +1319,70 @@
     ========================== -->
 
     <section id="skills">
+
       <div class="container">
 
         <div class="section-heading reveal">
-          <div class="section-label">Skills</div>
-          <h2>Technologies I work with.</h2>
+
+          <div class="section-label">
+            Skills
+          </div>
+
+          <h2>
+            Technologies I work with.
+          </h2>
+
           <p>
-            A practical stack built through coursework, projects, and
-            hands-on development.
+            A practical stack built through coursework, projects,
+            and hands-on development.
           </p>
+
         </div>
+
 
         <div class="skills-grid">
 
+
+          <!-- BACKEND -->
+
           <div class="skill-card reveal">
+
             <div class="skill-icon">
               <i class="fa-solid fa-server"></i>
             </div>
 
-            <h3>Backend</h3>
+            <h3>
+              Backend
+            </h3>
 
             <div class="skill-tags">
+
               <span>Python</span>
               <span>Django</span>
               <span>DRF</span>
               <span>FastAPI</span>
               <span>REST APIs</span>
               <span>JWT</span>
+
             </div>
+
           </div>
 
 
+          <!-- FRONTEND -->
+
           <div class="skill-card reveal">
+
             <div class="skill-icon">
               <i class="fa-solid fa-code"></i>
             </div>
 
-            <h3>Frontend</h3>
+            <h3>
+              Frontend
+            </h3>
 
             <div class="skill-tags">
+
               <span>React</span>
               <span>TypeScript</span>
               <span>JavaScript</span>
@@ -1213,36 +1390,52 @@
               <span>CSS3</span>
               <span>Tailwind CSS</span>
               <span>Vite</span>
+
             </div>
+
           </div>
 
 
+          <!-- DATABASE -->
+
           <div class="skill-card reveal">
+
             <div class="skill-icon">
               <i class="fa-solid fa-database"></i>
             </div>
 
-            <h3>Database & Data</h3>
+            <h3>
+              Database & Data
+            </h3>
 
             <div class="skill-tags">
+
               <span>SQLite</span>
               <span>MySQL</span>
               <span>SQLAlchemy</span>
               <span>SQL</span>
               <span>Data Validation</span>
               <span>QA</span>
+
             </div>
+
           </div>
 
 
+          <!-- TOOLS -->
+
           <div class="skill-card reveal">
+
             <div class="skill-icon">
               <i class="fa-solid fa-toolbox"></i>
             </div>
 
-            <h3>Tools & Platforms</h3>
+            <h3>
+              Tools & Platforms
+            </h3>
 
             <div class="skill-tags">
+
               <span>Git</span>
               <span>GitHub</span>
               <span>VS Code</span>
@@ -1250,11 +1443,15 @@
               <span>Render</span>
               <span>Firebase</span>
               <span>Leaflet</span>
+
             </div>
+
           </div>
 
         </div>
+
       </div>
+
     </section>
 
 
@@ -1263,26 +1460,40 @@
     ========================== -->
 
     <section class="projects" id="projects">
+
       <div class="container">
 
         <div class="section-heading reveal">
-          <div class="section-label">Selected Work</div>
-          <h2>Projects I've built.</h2>
+
+          <div class="section-label">
+            Selected Work
+          </div>
+
+          <h2>
+            Projects I've built.
+          </h2>
+
           <p>
             A selection of my live, hands-on software projects.
           </p>
+
         </div>
 
 
         <div class="project-list">
 
 
-          <!-- MEDIFINDER -->
+          <!-- =========================
+               MEDIFINDER
+          ========================== -->
 
           <article class="project-card featured reveal">
 
             <div class="project-visual">
-              <div class="project-number">01 / FEATURED</div>
+
+              <div class="project-number">
+                01 / FEATURED
+              </div>
 
               <div class="project-icon-large">
                 <i class="fa-solid fa-pills"></i>
@@ -1291,7 +1502,9 @@
               <div class="project-type">
                 Medicine Discovery Platform
               </div>
+
             </div>
+
 
             <div class="project-content">
 
@@ -1300,7 +1513,9 @@
                 Featured Project
               </div>
 
-              <h3>MediFinder Bangladesh</h3>
+              <h3>
+                MediFinder Bangladesh
+              </h3>
 
               <p>
                 A medicine discovery and pharmacy availability platform
@@ -1312,6 +1527,7 @@
               </p>
 
               <div class="project-tech">
+
                 <span>React</span>
                 <span>TypeScript</span>
                 <span>Vite</span>
@@ -1319,7 +1535,9 @@
                 <span>Leaflet</span>
                 <span>Gemini AI</span>
                 <span>React Context</span>
+
               </div>
+
 
               <div class="project-links">
 
@@ -1346,15 +1564,21 @@
               </div>
 
             </div>
+
           </article>
 
 
-          <!-- SMART FINANCE TRACKER -->
+          <!-- =========================
+               SMART FINANCE
+          ========================== -->
 
           <article class="project-card reveal">
 
             <div class="project-visual">
-              <div class="project-number">02</div>
+
+              <div class="project-number">
+                02
+              </div>
 
               <div class="project-icon-large">
                 <i class="fa-solid fa-chart-pie"></i>
@@ -1363,21 +1587,26 @@
               <div class="project-type">
                 Full-Stack Finance Application
               </div>
+
             </div>
+
 
             <div class="project-content">
 
-              <h3>Smart Finance Tracker</h3>
+              <h3>
+                Smart Finance Tracker
+              </h3>
 
               <p>
                 A full-stack personal finance application for managing
-                income and expenses. The application uses a React frontend
-                connected to a FastAPI backend with SQLite and SQLAlchemy,
-                including JWT-based authentication and transaction
-                management with data visualisation.
+                income and expenses. The application uses a React
+                frontend connected to a FastAPI backend with SQLite
+                and SQLAlchemy, including JWT-based authentication,
+                transaction management, and data visualisation.
               </p>
 
               <div class="project-tech">
+
                 <span>React</span>
                 <span>Vite</span>
                 <span>FastAPI</span>
@@ -1385,7 +1614,9 @@
                 <span>SQLite</span>
                 <span>SQLAlchemy</span>
                 <span>JWT</span>
+
               </div>
+
 
               <div class="project-links">
 
@@ -1412,15 +1643,21 @@
               </div>
 
             </div>
+
           </article>
 
 
-          <!-- HOUSEHOLDSERVICE -->
+          <!-- =========================
+               HOUSEHOLDSERVICE
+          ========================== -->
 
           <article class="project-card reveal">
 
             <div class="project-visual">
-              <div class="project-number">03</div>
+
+              <div class="project-number">
+                03
+              </div>
 
               <div class="project-icon-large">
                 <i class="fa-solid fa-house"></i>
@@ -1429,21 +1666,26 @@
               <div class="project-type">
                 Full-Stack Service Platform
               </div>
+
             </div>
+
 
             <div class="project-content">
 
-              <h3>HouseHoldService</h3>
+              <h3>
+                HouseHoldService
+              </h3>
 
               <p>
-                A full-stack household services platform built with Django
-                and Django REST Framework. The application includes
-                authentication, role-based access, service management,
-                API integration, and a responsive frontend for managing
-                household service interactions.
+                A full-stack household services platform built with
+                Django and Django REST Framework. The application
+                includes authentication, role-based access, service
+                management, API integration, and a responsive frontend
+                for managing household service interactions.
               </p>
 
               <div class="project-tech">
+
                 <span>Django</span>
                 <span>Django REST Framework</span>
                 <span>Python</span>
@@ -1452,7 +1694,9 @@
                 <span>REST API</span>
                 <span>Vercel</span>
                 <span>Render</span>
+
               </div>
+
 
               <div class="project-links">
 
@@ -1479,10 +1723,13 @@
               </div>
 
             </div>
+
           </article>
 
         </div>
+
       </div>
+
     </section>
 
 
@@ -1491,75 +1738,117 @@
     ========================== -->
 
     <section id="experience">
+
       <div class="container">
 
         <div class="section-heading reveal">
-          <div class="section-label">Experience</div>
-          <h2>Beyond the classroom.</h2>
+
+          <div class="section-label">
+            Experience
+          </div>
+
+          <h2>
+            Beyond the classroom.
+          </h2>
+
           <p>
             Experiences that have helped me develop technical,
             communication, and teamwork skills.
           </p>
+
         </div>
+
 
         <div class="experience-grid">
 
+
           <div class="timeline reveal">
 
+
             <div class="timeline-item">
-              <div class="timeline-date">2023 — Present</div>
 
-              <h3>Freelance Data & Content Specialist</h3>
+              <div class="timeline-date">
+                2023 — Present
+              </div>
 
-              <h4>Freelance / Remote</h4>
+              <h3>
+                Freelance Data & Content Specialist
+              </h3>
+
+              <h4>
+                Freelance / Remote
+              </h4>
 
               <p>
-                Worked on data-focused and content-related tasks requiring
-                accuracy, validation, consistency, research, and attention
-                to detail while working independently in a remote setting.
+                Worked on data-focused and content-related tasks
+                requiring accuracy, validation, consistency, research,
+                and attention to detail while working independently
+                in a remote setting.
               </p>
+
             </div>
 
 
             <div class="timeline-item">
-              <div class="timeline-date">2024</div>
 
-              <h3>Volunteer</h3>
+              <div class="timeline-date">
+                2024
+              </div>
 
-              <h4>Physics Olympiad</h4>
+              <h3>
+                Volunteer
+              </h3>
+
+              <h4>
+                Physics Olympiad
+              </h4>
 
               <p>
-                Supported event activities and coordination while working
-                with participants and team members in a collaborative
-                environment.
+                Supported event activities and coordination while
+                working with participants and team members in a
+                collaborative environment.
               </p>
+
             </div>
 
 
             <div class="timeline-item">
-              <div class="timeline-date">2023</div>
 
-              <h3>Volunteer</h3>
+              <div class="timeline-date">
+                2023
+              </div>
 
-              <h4>Physics Olympiad</h4>
+              <h3>
+                Volunteer
+              </h3>
+
+              <h4>
+                Physics Olympiad
+              </h4>
 
               <p>
-                Assisted with event operations and participant management,
-                strengthening teamwork, communication, and organizational
-                skills.
+                Assisted with event operations and participant
+                management, strengthening teamwork, communication,
+                and organizational skills.
               </p>
+
             </div>
+
 
           </div>
 
 
           <div class="about-card reveal">
-            <h3>What I'm Looking For</h3>
+
+            <h3>
+              What I'm Looking For
+            </h3>
 
             <p style="color: var(--muted); margin-bottom: 20px;">
-              I'm interested in software development opportunities where
-              I can work on real products, collaborate with a development
-              team, and strengthen my professional engineering skills.
+              I'm interested in software development opportunities
+              where I can work on real products, collaborate with a
+              development team, and strengthen my professional
+              engineering skills.
             </p>
 
             <ul class="about-list">
@@ -1590,10 +1879,13 @@
               </li>
 
             </ul>
+
           </div>
 
         </div>
+
       </div>
+
     </section>
 
 
@@ -1602,55 +1894,80 @@
     ========================== -->
 
     <section class="education" id="education">
+
       <div class="container">
 
         <div class="section-heading reveal">
-          <div class="section-label">Education</div>
-          <h2>Academic background.</h2>
+
+          <div class="section-label">
+            Education
+          </div>
+
+          <h2>
+            Academic background.
+          </h2>
+
         </div>
+
 
         <div class="education-grid">
 
+
           <div class="education-card reveal">
+
             <i class="fa-solid fa-graduation-cap"></i>
 
-            <h3>B.Sc. in Computer Science & Engineering</h3>
+            <h3>
+              B.Sc. in Computer Science & Engineering
+            </h3>
 
             <p>
               Independent University, Bangladesh (IUB)
               <br />
               2022 — 2026
             </p>
+
           </div>
 
 
           <div class="education-card reveal">
+
             <i class="fa-solid fa-school"></i>
 
-            <h3>Higher Secondary Certificate</h3>
+            <h3>
+              Higher Secondary Certificate
+            </h3>
 
             <p>
               HSC
               <br />
               2020
             </p>
+
           </div>
 
 
           <div class="education-card reveal">
+
             <i class="fa-solid fa-book-open"></i>
 
-            <h3>Secondary School Certificate</h3>
+            <h3>
+              Secondary School Certificate
+            </h3>
 
             <p>
               SSC
               <br />
               2018
             </p>
+
           </div>
 
+
         </div>
+
       </div>
+
     </section>
 
 
@@ -1659,37 +1976,57 @@
     ========================== -->
 
     <section id="contact">
+
       <div class="container">
 
         <div class="section-heading reveal">
-          <div class="section-label">Contact</div>
-          <h2>Let's build something useful.</h2>
+
+          <div class="section-label">
+            Contact
+          </div>
+
+          <h2>
+            Let's build something useful.
+          </h2>
+
           <p>
-            I'm open to software development, full-stack, SQA, and
-            internship opportunities.
+            I'm open to software development, full-stack, SQA,
+            and internship opportunities.
           </p>
+
         </div>
+
 
         <div class="contact-grid">
 
+
           <div class="contact-info reveal">
 
-            <h3>Get in touch.</h3>
+            <h3>
+              Get in touch.
+            </h3>
 
             <p>
-              Whether you have an opportunity, a project idea, or simply
-              want to connect, feel free to reach out.
+              Whether you have an opportunity, a project idea,
+              or simply want to connect, feel free to reach out.
             </p>
 
+
             <div class="contact-item">
+
               <i class="fa-solid fa-envelope"></i>
+
               <a href="mailto:jannatulmahia8215@gmail.com">
                 jannatulmahia8215@gmail.com
               </a>
+
             </div>
 
+
             <div class="contact-item">
+
               <i class="fa-brands fa-github"></i>
+
               <a
                 href="https://github.com/jannatulmahia20"
                 target="_blank"
@@ -1697,10 +2034,14 @@
               >
                 github.com/jannatulmahia20
               </a>
+
             </div>
 
+
             <div class="contact-item">
+
               <i class="fa-brands fa-linkedin"></i>
+
               <a
                 href="https://linkedin.com/in/jannatul-mahia20"
                 target="_blank"
@@ -1708,7 +2049,9 @@
               >
                 linkedin.com/in/jannatul-mahia20
               </a>
+
             </div>
+
 
             <div class="social-links">
 
@@ -1721,6 +2064,7 @@
                 <i class="fa-brands fa-github"></i>
               </a>
 
+
               <a
                 href="https://linkedin.com/in/jannatul-mahia20"
                 target="_blank"
@@ -1729,6 +2073,7 @@
               >
                 <i class="fa-brands fa-linkedin-in"></i>
               </a>
+
 
               <a
                 href="mailto:jannatulmahia8215@gmail.com"
@@ -1742,11 +2087,7 @@
           </div>
 
 
-          <!--
-            This form opens the user's email client.
-            It does not falsely claim that a message was sent
-            through the website.
-          -->
+          <!-- CONTACT FORM -->
 
           <form
             class="contact-form reveal"
@@ -1754,7 +2095,10 @@
           >
 
             <div class="form-group">
-              <label for="name">Name</label>
+
+              <label for="name">
+                Name
+              </label>
 
               <input
                 type="text"
@@ -1763,11 +2107,15 @@
                 placeholder="Your name"
                 required
               />
+
             </div>
 
 
             <div class="form-group">
-              <label for="email">Email</label>
+
+              <label for="email">
+                Email
+              </label>
 
               <input
                 type="email"
@@ -1776,11 +2124,15 @@
                 placeholder="your@email.com"
                 required
               />
+
             </div>
 
 
             <div class="form-group">
-              <label for="message">Message</label>
+
+              <label for="message">
+                Message
+              </label>
 
               <textarea
                 id="message"
@@ -1788,6 +2140,7 @@
                 placeholder="Write your message..."
                 required
               ></textarea>
+
             </div>
 
 
@@ -1796,14 +2149,20 @@
               class="btn btn-primary"
               style="border: none; cursor: pointer;"
             >
+
               Send Message
+
               <i class="fa-solid fa-paper-plane"></i>
+
             </button>
 
           </form>
 
+
         </div>
+
       </div>
+
     </section>
 
   </main>
@@ -1814,12 +2173,18 @@
   ========================== -->
 
   <footer>
+
     <div class="container">
 
       <div class="footer-inner">
 
         <div class="footer-logo">
-          Jannatul<span>.</span>
+
+          <img
+            src="jm logo.png"
+            alt="JM Logo"
+          />
+
         </div>
 
         <p>
@@ -1829,6 +2194,7 @@
       </div>
 
     </div>
+
   </footer>
 
 
@@ -1838,90 +2204,161 @@
 
   <script>
 
-    /* Mobile navigation */
+    /* =========================
+       MOBILE NAVIGATION
+    ========================== */
 
-    const menuToggle = document.getElementById("menuToggle");
-    const navLinks = document.getElementById("navLinks");
+    const menuToggle =
+      document.getElementById("menuToggle");
+
+    const navLinks =
+      document.getElementById("navLinks");
+
 
     menuToggle.addEventListener("click", () => {
+
       navLinks.classList.toggle("active");
 
-      const icon = menuToggle.querySelector("i");
+      const icon =
+        menuToggle.querySelector("i");
+
 
       if (navLinks.classList.contains("active")) {
+
         icon.classList.remove("fa-bars");
+
         icon.classList.add("fa-xmark");
+
       } else {
+
         icon.classList.remove("fa-xmark");
+
         icon.classList.add("fa-bars");
+
       }
+
     });
 
 
-    /* Close mobile menu after clicking a link */
+    /* Close mobile menu */
 
-    document.querySelectorAll(".nav-links a").forEach(link => {
-      link.addEventListener("click", () => {
-        navLinks.classList.remove("active");
+    document
+      .querySelectorAll(".nav-links a")
+      .forEach(link => {
 
-        const icon = menuToggle.querySelector("i");
+        link.addEventListener("click", () => {
 
-        icon.classList.remove("fa-xmark");
-        icon.classList.add("fa-bars");
-      });
-    });
+          navLinks.classList.remove("active");
 
+          const icon =
+            menuToggle.querySelector("i");
 
-    /* Scroll reveal */
+          icon.classList.remove("fa-xmark");
 
-    const revealElements = document.querySelectorAll(".reveal");
+          icon.classList.add("fa-bars");
 
-    const revealObserver = new IntersectionObserver(
-      entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("active");
-          }
         });
-      },
-      {
-        threshold: 0.12
-      }
-    );
+
+      });
+
+
+    /* =========================
+       SCROLL REVEAL
+    ========================== */
+
+    const revealElements =
+      document.querySelectorAll(".reveal");
+
+
+    const revealObserver =
+      new IntersectionObserver(
+        entries => {
+
+          entries.forEach(entry => {
+
+            if (entry.isIntersecting) {
+
+              entry.target.classList.add("active");
+
+            }
+
+          });
+
+        },
+        {
+          threshold: 0.12
+        }
+      );
+
 
     revealElements.forEach(element => {
+
       revealObserver.observe(element);
+
     });
 
 
-    /* Contact form */
+    /* =========================
+       CONTACT FORM
+    ========================== */
 
-    const contactForm = document.getElementById("contactForm");
+    const contactForm =
+      document.getElementById("contactForm");
 
-    contactForm.addEventListener("submit", function (event) {
 
-      event.preventDefault();
+    contactForm.addEventListener(
+      "submit",
+      function (event) {
 
-      const name = document.getElementById("name").value.trim();
-      const email = document.getElementById("email").value.trim();
-      const message = document.getElementById("message").value.trim();
+        event.preventDefault();
 
-      const subject = encodeURIComponent(
-        "Portfolio Contact from " + name
-      );
 
-      const body = encodeURIComponent(
-        "Name: " + name +
-        "\nEmail: " + email +
-        "\n\nMessage:\n" + message
-      );
+        const name =
+          document
+            .getElementById("name")
+            .value
+            .trim();
 
-      window.location.href =
-        "mailto:jannatulmahia8215@gmail.com?subject=" +
-        subject +
-        "&body=" +
-        body;
-    });
+
+        const email =
+          document
+            .getElementById("email")
+            .value
+            .trim();
+
+
+        const message =
+          document
+            .getElementById("message")
+            .value
+            .trim();
+
+
+        const subject =
+          encodeURIComponent(
+            "Portfolio Contact from " + name
+          );
+
+
+        const body =
+          encodeURIComponent(
+            "Name: " +
+              name +
+              "\nEmail: " +
+              email +
+              "\n\nMessage:\n" +
+              message
+          );
+
+
+        window.location.href =
+          "mailto:jannatulmahia8215@gmail.com?subject=" +
+          subject +
+          "&body=" +
+          body;
+
+      }
+    );
 
   </script>
 
